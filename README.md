@@ -71,3 +71,24 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 ## License
 
 Nest is [MIT licensed](LICENSE).
+
+## List of dependencies
+
+* axios -> for HTTP calls
+* dotenv -> to configure .env file
+* openai -> for llm integration (gpt-3.5-turbo)
+* tiktoken -> to get to know how many tokens were consumed during requests / responses. This way we can create a policy such that the context window will never be exceeded.
+* other dependencies -> used to run common nestjs projects & for typescript configuration
+
+## Steps used to train / use the model
+
+There is no need to train the model, since it will be already trained when you run the app. The way this web app works is that after you run the project, 5 offers with the client requirements and the corresponding responses will be put into an array that represents the `context window`.
+
+Since `gtp-3.5-turbo` can hold up to `16384` tokens in its context, we need to always keep in mind that we have to remove old messages when we are very close to that threshold.
+
+The model will learn from the `system prompt` & his previous messages what he needs to do. We will never delete the `system` prompt (only the `user` and `assistant` prompts)
+
+Just run the project, go to `localhost:3000` and fill in the input with the client's requirement. After 20-30 seconds you will get the desired output.
+
+![image](https://github.com/user-attachments/assets/379f4073-a833-4ce0-809e-2c13cd7021dc)
+
