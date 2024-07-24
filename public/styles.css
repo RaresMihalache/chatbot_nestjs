@@ -1,0 +1,32 @@
+#chatbox {
+  height: 700px;
+  overflow-y: scroll;
+}
+
+.message {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.user {
+  background-color: #dcf8c6;
+  text-align: left;
+}
+
+.bot {
+  background-color: #eee;
+  text-align: left;
+}
+
+.message.user {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
+}
+
+.message.bot {
+  background-color: #f8f9fa;
+  color: black;
+  text-align: left;
+}

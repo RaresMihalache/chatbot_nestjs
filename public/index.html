@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot oferte</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header">
+          <h4>Chatbot</h4>
+        </div>
+        <div class="card-body" id="chatbox"></div>
+    </div>
+    <div class="card-footer">
+      <div class="input-group">
+        <input type="text" class="form-control" id="messageInput" placeholder="Scrie cerintele proiectului aici...">
+        <div class="input-group-append">
+          <button class="btn btn-primary" onclick="sendMessage()">Send</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
